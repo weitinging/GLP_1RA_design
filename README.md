@@ -16,13 +16,13 @@ We conducted an *in silico* pipeline for the design of GLP-1RAs. The codebase is
 
 
 
-## Procedure
+## Documentation
 
 ### Step 1: Conserved Sites Identification and Sequence Design
 
-We first defined the conserved sites of GLP-1RAs, whose amino acid types were later fixed during the design with a total number of 10,000 sequences  using [ProteinMPNN](https://github.com/dauparas/ProteinMPNN.git. We then used [AlphaFold2](https://github.com/google-deepmind/alphafold) to predict those structures used for further screening. 
+We first defined the conserved sites of GLP-1RAs, whose amino acid types were later fixed during the design using [ProteinMPNN](https://github.com/dauparas/ProteinMPNN.git). We then used [AlphaFold2](https://github.com/google-deepmind/alphafold) to predict those structures used for further screening. 
 
-Note that our filtering pipeline could be extended to hold arbitrary sequence designer and structure predictors beyond ProteinMPNN and AF2 in general.
+Our filtering pipeline could also be extended to hold arbitrary sequence designer and structure predictors beyond ProteinMPNN and AF2 in general.
 
 ### Step 2: Functional Screening
 
@@ -53,7 +53,7 @@ When calculating the motif-RMSD using the [script](https://github.com/Immortals-
 
 By then you can use the script to filter the designed proteins. For example, the following command aims to filter the proteins whose pLDDT > 80 and motif-RMSD compared with the native ones < 1.0 Å:
 
-``````shell
+```
 python motif_rmsd.py \
        -d DESIGN_PATH \
        -r REFERENCE_PDB \
@@ -61,20 +61,20 @@ python motif_rmsd.py \
        --motif-r REFERENCE_MOTIF \
        --rmsd 1.0 \
        --plddt 80
-``````
+```
 
-#### SAP (Spatial Aggregation Propensity)
+#### SAP (Spatial Aggregation Propensity)  
 
-Since calculating SAP needs [PyRosetta](https://www.pyrosetta.org/), we recommend using a separate conda environment:
+Since calculating SAP depends on [PyRosetta](https://www.pyrosetta.org/), we recommend using a separate conda environment:
 
-```shell
+```
 conda env create -f envs/pyrosetta.yml
 source activate PyRosetta
 ```
 
 You can then use the following command and [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/pipeline/sap.py) to filter designed proteins either based on the comparison with reference PDB or a specific value:
 
-``````shell
+```
 # This will keep the designed proteins with SAP scores lower than the native
 python sap.py \
        -d DESIGN_PATH
@@ -84,11 +84,11 @@ python sap.py \
 python sap.py \
        -d DESIGN_PATH
        --sap 20.0
-``````
+```
 
 </details>
 
-#### Step 3: {TO BE WRITTEN}
+### Step 3: {TO BE WRITTEN}
 
 
 
