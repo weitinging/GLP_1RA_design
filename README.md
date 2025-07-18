@@ -38,7 +38,7 @@ You can set up a conda environment used for the functional screnning by:
 ``````shell
 git clone https://github.com/Immortals-33/GLP_1RA_design.git
 cd GLP_1RA_design
-conda env create -f env/env.yaml
+conda env create -f envs/env.yaml
 source activate glp_1ra_design
 ``````
 
@@ -68,7 +68,7 @@ python motif_rmsd.py \
 Since calculating SAP needs [PyRosetta](https://www.pyrosetta.org/), we recommend using a separate conda environment:
 
 ```shell
-conda env create -f env/pyrosetta.yml
+conda env create -f envs/pyrosetta.yml
 source activate PyRosetta
 ```
 

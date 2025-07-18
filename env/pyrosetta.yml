@@ -1,0 +1,17 @@
+name: PyRosetta
+channels:
+  - salilab
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - bzip2=1.0.8=h7b6447c_0
+  - dssp=3.0.0=hf484d3e_3
+  - icu=58.2=he6710b0_3
+  - libboost=1.67.0=h46d08c1_4
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - xz=5.2.6=h5eee18b_0
+  - zlib=1.2.11=h7f8727e_4
+prefix: /dssg/home/acct-clschf/clschf/.conda/envs/PyRosetta
