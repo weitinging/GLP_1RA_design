@@ -11,7 +11,8 @@ Accompanied in silico analysis codebase for paper [AI-driven efficient *de novo*
 
 We conducted an *in silico* pipeline for the design of GLP-1RAs. The codebase is organized as follows:
 
-* `./pipeline` includes the filtering procedures using structure and sequence-based *in silico* metrics like motif-RMSD, pLDDT, etc.
+* `./envs` contains the environment dependencies.
+* `./pipeline` includes the filtering procedures using structure and sequence-based *in silico* metrics.
 * {TO BE WRITTEN}
 
 
