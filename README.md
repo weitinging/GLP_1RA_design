@@ -5,7 +5,7 @@
 
 Accompanied in silico analysis codebase for paper [AI-driven efficient *de novo* design of GLP-1RAs with extended half-life and enhanced efficacy](https://www.biorxiv.org/content/10.1101/2025.03.26.645438v1). 
 
-![image](assets/main_fig.png)
+![image](assets/main_fig.jpg)
 
 ## Description
 
