@@ -42,7 +42,7 @@ You can set up a conda environment used for proteinMPNN design
 
 #### Motif-RMSD and pLDDT
 
-When calculating the motif-RMSD using the [script]() you should prepare the following information:
+When calculating the motif-RMSD using the [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step2_Functional_Screening/motif_rmsd_plddt.py) you should prepare the following information:
 
 * `DESIGN_PATH` is the path storing your designed PDBs. Suppose you have $N$ designed proteins, you should assign an ID for each design like `{protein_name}_1,`, `{protein_name}_2`, ..., `{protein_name}_$N$` with the name of protein and the ID separated by `_` .  
 * `REFERENCE_PDB` is the reference protein you used to calcualte the motif-RMSD with. 
@@ -70,7 +70,7 @@ conda env create -f envs/pyrosetta.yml
 source activate PyRosetta
 ```
 
-You can then use the following command and [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/pipeline/sap.py) to filter designed proteins either based on the comparison with reference PDB or a specific value:
+You can then use the following command and [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step2_Functional_Screening/sap.py) to filter designed proteins either based on the comparison with reference PDB or a specific value:
 
 ```
 # This will keep the designed proteins with SAP scores lower than the native
