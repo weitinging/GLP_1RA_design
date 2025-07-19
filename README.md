@@ -23,7 +23,7 @@ We conducted an *in silico* pipeline for the design of GLP-1RAs. The codebase is
 
 We first defined the conserved sites of GLP-1RAs, whose amino acid types were later fixed during the design using [ProteinMPNN](https://github.com/dauparas/ProteinMPNN.git). We then used [AlphaFold2](https://github.com/google-deepmind/alphafold) to predict those structures used for further screening. 
 
-Our filtering pipeline could also be extended to hold arbitrary sequence designer and structure predictors beyond ProteinMPNN and AF2 in general.
+Our filtering pipeline could also be extended to hold arbitrary sequence designers and structure predictors beyond ProteinMPNN and AF2 in general.
 
 #### Installation
 You can set up a conda environment used for proteinMPNN design
