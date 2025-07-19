@@ -12,40 +12,38 @@ Accompanied in silico analysis codebase for paper [AI-driven efficient *de novo*
 We conducted an *in silico* pipeline for the design of GLP-1RAs. The codebase is organized as follows:
 
 * `./envs` contains the environment dependencies.
-* `./pipeline` includes the filtering procedures using structure and sequence-based *in silico* metrics.
-* {TO BE WRITTEN}
+* `./step1_ProteinMPNN_Design` fixed 12 conserved sites and then used ProteinMPNN to design the remaining 19 sites.
+* `./step2_Functional_Screening` includes the virtual screening based on stability, efficacy, and diversity criteria
 
 
 
 ## Documentation
 
-### Step 1: Conserved Sites Identification and Sequence Design
+### Step 1:  De novo GLP-1RAs Design
 
 We first defined the conserved sites of GLP-1RAs, whose amino acid types were later fixed during the design using [ProteinMPNN](https://github.com/dauparas/ProteinMPNN.git). We then used [AlphaFold2](https://github.com/google-deepmind/alphafold) to predict those structures used for further screening. 
 
 Our filtering pipeline could also be extended to hold arbitrary sequence designer and structure predictors beyond ProteinMPNN and AF2 in general.
 
+#### Installation
+You can set up a conda environment used for proteinMPNN design
+* `conda create --name mlfold` - this creates conda environment called mlfold.
+* `source activate mlfold` - this activate environment.
+* `conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch` - install pytorch following steps from https://pytorch.org.
+
 ### Step 2: Functional Screening
+
+<details>
+* Stability: To improve stability and extend the half-life of the designed GLP-1RAs, sequences containing these cleavage sites were filtered out. we further filter the designed GLP-1RAs based on the net charge and spatial aggregation propensity (SAP) score.
+* Efficacy: AlphaFold2 was used to predict the complex structures of the designed GLP-1RA sequences and GLP-1R. pLDDT evaluate the quality of the predicted protein structure and RMSD assess how well the designed structure aligns with the native structure
+* Diversity: The similarity between designed sequences and the approved drug remained below the threshold defined by relevant patents.  Phylogenetic trees were generated to categorize sequences, and a single representative sequence was selected in each phylogenetic cluster
 
 <details>
     <summary>Expand</summary>
 
-Herein we conduct functional screnning based on various *in silico* metrics of which the usage would be shown within the following steps.
-
-#### Installation
-
-You can set up a conda environment used for the functional screnning by:
-
-``````shell
-git clone https://github.com/Immortals-33/GLP_1RA_design.git
-cd GLP_1RA_design
-conda env create -f envs/env.yaml
-source activate glp_1ra_design
-``````
-
 #### Motif-RMSD and pLDDT
 
-When calculating the motif-RMSD using the [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/pipeline/motif_rmsd.py) you should prepare the following information:
+When calculating the motif-RMSD using the [script]() you should prepare the following information:
 
 * `DESIGN_PATH` is the path storing your designed PDBs. Suppose you have $N$ designed proteins, you should assign an ID for each design like `{protein_name}_1,`, `{protein_name}_2`, ..., `{protein_name}_$N$` with the name of protein and the ID separated by `_` .  
 * `REFERENCE_PDB` is the reference protein you used to calcualte the motif-RMSD with. 
@@ -55,13 +53,13 @@ When calculating the motif-RMSD using the [script](https://github.com/Immortals-
 By then you can use the script to filter the designed proteins. For example, the following command aims to filter the proteins whose pLDDT > 80 and motif-RMSD compared with the native ones < 1.0 Å:
 
 ```
-python motif_rmsd.py \
-       -d DESIGN_PATH \
-       -r REFERENCE_PDB \
-       --motif-d DESIGN_MOTIF \
-       --motif-r REFERENCE_MOTIF \
-       --rmsd 1.0 \
-       --plddt 80
+python motif_rmsd_plddt.py \
+-d /dssg/home/acct-clschf/clschf/weiting/GLP/AF2/output \
+-r 7ki0_new.pdb \
+--motif_d motif.txt \
+--motif_r motif_com.txt \
+--root-path /dssg/home/acct-clschf/clschf/weiting/GLP/filter/AF2_rmsd_plddt \
+--rmsd 2.0
 ```
 
 #### SAP (Spatial Aggregation Propensity)  
@@ -87,24 +85,6 @@ python sap.py \
        --sap 20.0
 ```
 
-</details>
-
-### Step 3: {TO BE WRITTEN}
-
-
-
-
-
-***
-
-## Contact
-
-* {TO BE WRITTEN}
-
-
-
-***
-
 ## Citation
 
 If you have used the code in your research, please cite:
@@ -126,4 +106,5 @@ url = {https://www.biorxiv.org/content/10.1101/2025.03.26.645438v1}
 ***
 
 ## Acknowledgements
+https://github.com/dauparas/ProteinMPNN
 
