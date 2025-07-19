@@ -105,6 +105,7 @@ url = {https://www.biorxiv.org/content/10.1101/2025.03.26.645438v1}
 ***
 
 ## Acknowledgements
-https://github.com/dauparas/ProteinMPNN
-https://github.com/Immortals-33/FPP
+* https://github.com/dauparas/ProteinMPNN
+* https://github.com/Immortals-33/FPP
+* https://github.com/google-deepmind/alphafold
 
