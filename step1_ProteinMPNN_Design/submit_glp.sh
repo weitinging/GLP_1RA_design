@@ -1,5 +1,5 @@
 
-#please firstly install https://github.com/dauparas/ProteinMPNN
+#please firstly install ProteinMPNN https://github.com/dauparas/ProteinMPNN
 
 source activate mlfold
 
