@@ -83,6 +83,7 @@ python sap.py \
        -d DESIGN_PATH
        --sap 20.0
 ```
+</details>
 
 ## Citation
 
@@ -97,10 +98,6 @@ journal = {bioRxiv},
 url = {https://www.biorxiv.org/content/10.1101/2025.03.26.645438v1}
 }
 ```
-
-
-
-
 
 ***
 
