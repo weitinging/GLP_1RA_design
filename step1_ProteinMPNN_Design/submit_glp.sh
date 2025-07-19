@@ -1,10 +1,5 @@
 
-#!/bin/bash
-#SBATCH -p gpu
-#SBATCH --mem=32g
-#SBATCH --gres=gpu:rtx2080:1
-#SBATCH -c 3
-#SBATCH --output=example_4_non_fixed.out
+#please firstly install https://github.com/dauparas/ProteinMPNN
 
 source activate mlfold
 
