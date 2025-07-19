@@ -14,4 +14,3 @@ dependencies:
   - libstdcxx-ng=11.2.0=h1234567_1
   - xz=5.2.6=h5eee18b_0
   - zlib=1.2.11=h7f8727e_4
-prefix: /dssg/home/acct-clschf/clschf/.conda/envs/PyRosetta
