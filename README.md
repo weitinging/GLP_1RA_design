@@ -22,6 +22,7 @@ We conducted an *in silico* pipeline for the design of GLP-1RAs. The codebase is
 ### Step 1:  De novo GLP-1RAs Design
 #### Design
 We first defined 13 conserved sites (7H, 8Aib, 9E, 10G, 11T, 12F, 13T, 14S, 15D, 17S, 26K, 34R, 37G) of GLP-1RAs, those amino acid types were fixed during the design using [ProteinMPNN](https://github.com/dauparas/ProteinMPNN.git). Your should firstly install the ProteinMPNN and then excet the shell script [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step1_ProteinMPNN_Design/submit_glp.sh) 
+* `sh submit_glp.sh` 
 
 
 We then used [AlphaFold2](https://github.com/google-deepmind/alphafold) to predict those structures used for further screening. 
