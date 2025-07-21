@@ -12,7 +12,7 @@ Accompanied in silico analysis codebase for paper [AI-driven efficient *de novo*
 We conducted an *in silico* pipeline for the design of GLP-1RAs. The codebase is organized as follows:
 
 * `./envs` contains the environment dependencies.
-* `./step1_ProteinMPNN_Design` fixed 12 conserved sites and then used ProteinMPNN to design the remaining 19 sites.
+* `./step1_ProteinMPNN_Design` fixed 13 conserved sites and then used ProteinMPNN to design the remaining 18 sites.
 * `./step2_Functional_Screening` includes the virtual screening based on stability, efficacy, and diversity criteria
 
 
@@ -20,8 +20,11 @@ We conducted an *in silico* pipeline for the design of GLP-1RAs. The codebase is
 ## Documentation
 
 ### Step 1:  De novo GLP-1RAs Design
+#### Design
+We first defined 13 conserved sites (7H, 8Aib, 9E, 10G, 11T, 12F, 13T, 14S, 15D, 17S, 26K, 34R, 37G) of GLP-1RAs, those amino acid types were fixed during the design using [ProteinMPNN](https://github.com/dauparas/ProteinMPNN.git). Your should firstly install the ProteinMPNN and then excet the shell script [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step1_ProteinMPNN_Design/submit_glp.sh) 
 
-We first defined the conserved sites of GLP-1RAs, whose amino acid types were later fixed during the design using [ProteinMPNN](https://github.com/dauparas/ProteinMPNN.git). We then used [AlphaFold2](https://github.com/google-deepmind/alphafold) to predict those structures used for further screening. 
+
+We then used [AlphaFold2](https://github.com/google-deepmind/alphafold) to predict those structures used for further screening. 
 
 Our filtering pipeline could also be extended to hold arbitrary sequence designers and structure predictors beyond ProteinMPNN and AF2 in general.
 
