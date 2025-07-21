@@ -1,16 +1,13 @@
+#!/bin/bash
 
 #please firstly install ProteinMPNN https://github.com/dauparas/ProteinMPNN
-
 source activate mlfold
-
 folder_with_pdbs="./inputs/"
-
 output_dir="./outputs/"
 if [ ! -d $output_dir ]
 then
     mkdir -p $output_dir
 fi
-
 
 path_for_parsed_chains=$output_dir"/parsed_pdbs.jsonl"
 path_for_assigned_chains=$output_dir"/assigned_pdbs.jsonl"
