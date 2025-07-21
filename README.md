@@ -46,7 +46,7 @@ You can set up a conda environment used for proteinMPNN design
 
 #### Motif-RMSD and pLDDT
 
-When calculating the motif-RMSD using the [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step2_Functional_Screening/motif_rmsd_plddt.py) you should prepare the following information:
+When calculating the motif-RMSD using the [motif_rmsd_plddt.py](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step2_Functional_Screening/motif_rmsd_plddt.py) you should prepare the following information:
 
 * `DESIGN_PATH` is the path storing your designed PDBs. Suppose you have $N$ designed proteins, you should assign an ID for each design like `{protein_name}_1,`, `{protein_name}_2`, ..., `{protein_name}_$N$` with the name of protein and the ID separated by `_` .  
 * `REFERENCE_PDB` is the reference protein you used to calcualte the motif-RMSD with. 
@@ -54,7 +54,6 @@ When calculating the motif-RMSD using the [script](https://github.com/Immortals-
 * `REFERENCE_MOTIF` is the `.txt` file containing the information of reference motif following the logic aforementioned. 
 
 By then you can use the script to filter the designed proteins. For example, the following command aims to filter the proteins whose pLDDT > 80 and motif-RMSD compared with the native ones < 1.0 Å:
-
 ```
 python motif_rmsd_plddt.py \
 -d /dssg/home/acct-clschf/clschf/weiting/GLP/AF2/output \
