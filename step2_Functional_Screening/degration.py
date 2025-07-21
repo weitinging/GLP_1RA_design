@@ -23,5 +23,5 @@ with open(output_path, 'w') as result_file:
             seq[20:22] != 'EF' and seq[21:23] != 'FI' and seq[24:26] != 'WL'):
             degradation_count += 1
         else:
-            result_file.write(f"{header}{seq}")
+            result_file.write(f"{header}\n{seq}\n")
 print(f"Degradation number: {degradation_count}")
