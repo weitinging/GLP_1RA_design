@@ -1,0 +1,22 @@
+>7ki0_new, score=1.6962, global_score=1.9557, fixed_chains=['R'], designed_chains=['P'], model_name=v_48_020, git_hash=8907e6671bfbfc92303b5f79c4b5e6ce47cdef57, seed=37
+HXEGTFTSDVSSYLEGQAAKEFIAWLVRGR
+>T=0.1, sample=1, score=1.0904, global_score=1.9375, seq_recovery=0.5556
+HXEGTFTSDVSSYLEEKAVKEFVERLKRGS
+>T=0.1, sample=2, score=1.1071, global_score=1.9344, seq_recovery=0.5000
+HXEGTFTSDVSRYLEEKQAKEFVERLKRGA
+>T=0.1, sample=3, score=1.1162, global_score=1.9464, seq_recovery=0.5000
+HXEGTFTSDVSSYLEEKAVKAFVERLKRGG
+>T=0.1, sample=4, score=1.0725, global_score=1.9369, seq_recovery=0.4444
+HXEGTFTSDVSRYLEEKQTKEFVERLKRGS
+>T=0.1, sample=5, score=1.0757, global_score=1.9415, seq_recovery=0.5556
+HXEGTFTSDVSRYLEEKAAKEFVDRLKRGS
+>T=0.1, sample=6, score=1.1219, global_score=1.9407, seq_recovery=0.5556
+HXEGTFTSDVSSFLEEKAAKEFVERLKRGS
+>T=0.1, sample=7, score=1.0913, global_score=1.9413, seq_recovery=0.5000
+HXEGTFTSDVSRYLEEKQAKEFVERLKRGS
+>T=0.1, sample=8, score=1.0742, global_score=1.9337, seq_recovery=0.5556
+HXEGTFTSDVSRYLEEKAAKEFVERLKRGG
+>T=0.1, sample=9, score=1.1171, global_score=1.9382, seq_recovery=0.5556
+HXEGTFTSDVSSFLEEKAVKEFVERLKRGR
+>T=0.1, sample=10, score=1.1086, global_score=1.9365, seq_recovery=0.5556
+HXEGTFTSDVSRLLEERAAKEFVERLKRGR
