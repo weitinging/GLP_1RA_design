@@ -73,7 +73,7 @@ conda env create -f envs/pyrosetta.yml
 source activate PyRosetta
 ```
 
-You can then use the following command and [script](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step2_Functional_Screening/sap.py) to filter designed proteins either based on the comparison with reference PDB or a specific value:
+You can then use the following command and [sap.py](https://github.com/Immortals-33/GLP_1RA_design/blob/main/step2_Functional_Screening/sap.py) to filter designed proteins either based on the comparison with reference PDB or a specific value:
 
 ```
 # This will keep the designed proteins with SAP scores lower than the native
