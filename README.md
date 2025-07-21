@@ -3,7 +3,7 @@
 
 
 
-Accompanied in silico analysis codebase for paper [AI-driven efficient *de novo* design of GLP-1RAs with extended half-life and enhanced efficacy](https://www.biorxiv.org/content/10.1101/2025.03.26.645438v1). 
+Accompanied _in silico_ analysis codebase for paper [AI-driven efficient *de novo* design of GLP-1RAs with extended half-life and enhanced efficacy](https://www.biorxiv.org/content/10.1101/2025.03.26.645438v1). 
 
 ![image](assets/main_fig.jpg)
 
@@ -37,9 +37,9 @@ You can set up a conda environment used for proteinMPNN design
 
 ### Step 2: Functional Screening
 
-* Stability: To improve stability and extend the half-life of the designed GLP-1RAs, sequences containing these cleavage sites were filtered out. we further filter the designed GLP-1RAs based on the net charge and spatial aggregation propensity (SAP) score.
-* Efficacy: AlphaFold2 was used to predict the complex structures of the designed GLP-1RA sequences and GLP-1R. pLDDT evaluate the quality of the predicted protein structure and RMSD assess how well the designed structure aligns with the native structure
-* Diversity: The similarity between designed sequences and the approved drug remained below the threshold defined by relevant patents.  Phylogenetic trees were generated to categorize sequences, and a single representative sequence was selected in each phylogenetic cluster
+* __Stability__: To improve stability and extend the half-life of the designed GLP-1RAs, sequences containing these cleavage sites were filtered out. we further filter the designed GLP-1RAs based on the net charge and spatial aggregation propensity (SAP) score.
+* __Efficacy__: AlphaFold2 was used to predict the complex structures of the designed GLP-1RA sequences and GLP-1R. pLDDT evaluates the quality of the predicted protein structure and RMSD assess how well the designed structure aligns with the native structure
+* __Diversity__: The similarity between designed sequences and the approved drug remained below the threshold defined by relevant patents.  Phylogenetic trees were generated to categorize sequences, and a single representative sequence was selected in each phylogenetic cluster
 
 <details>
     <summary>Expand</summary>
